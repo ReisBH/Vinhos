@@ -67,7 +67,7 @@ main a img {
   }
   
   main a img {
-    max-width: 280px;
+    max-width: 200px;
     margin: 0 auto;
     display: inline-block;
   }
