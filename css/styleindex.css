@@ -55,3 +55,20 @@ main a img {
   margin: 0 auto;
   display: inline-block;
 }
+
+/* responsive */
+@media (max-width: 600px) {
+  
+  main {
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main a img {
+    max-width: 280px;
+    margin: 0 auto;
+    display: inline-block;
+  }
+}
