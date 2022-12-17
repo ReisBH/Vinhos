@@ -12,7 +12,13 @@ a:hover {
 }
 
 .wrapper-header {
-  background-color: #ccc;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -31,6 +37,11 @@ a:hover {
   align-items: center;
 }
 
+.logo-container div h1 a {
+  text-decoration: none;
+  color: black;
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -40,7 +51,7 @@ main {
 }
 
 main a img {
-  max-width: 360px;
+  max-width: 280px;
   margin: 0 auto;
   display: inline-block;
 }
