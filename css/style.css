@@ -124,14 +124,6 @@ body {
     background: #000;
 }
 
-.red {
-    background: #D5212E;
-}
-
-.orange {
-    background: #F18557;
-}
-
 .product-colors .active:after{
     content: "";
     width: 36px;
@@ -159,7 +151,7 @@ body {
     }
     .container .imgBx img {
         left: initial;
-        max-width: 100%;
+        max-width: 360px;
         transform: rotate(0deg);
     }
     .details {
