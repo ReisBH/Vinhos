@@ -8,12 +8,15 @@ body {
   background-image: url(../imgLinks/background12.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 a,
 a:hover {
   text-decoration: none;
 }
+
+/* Configuração da barra de navegação*/
 
 .wrapper-header div {
   max-width: 600px;
@@ -27,7 +30,7 @@ a:hover {
 }
 
 .home {
-  padding: 4rem 0 4rem 0;
+  padding: 4px 0 4px 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -106,4 +109,58 @@ a:hover {
 .container ul li a:hover::before {
   width: 100%;
   filter: drop-shadow(0 0 25px var(--color));
+}
+
+/* Configuração do conteúdo da página*/
+
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+  display: block;
+  text-align: center;
+  color: #ccc;
+}
+
+main div {
+  display: inline-block;
+}
+
+.img-container div {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color:rgba(204, 204, 204, 0.3);
+  margin: 10px;
+}
+
+main div a img {
+  max-width: 270px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  
+  main {
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main a img {
+    max-width: 200px;
+    margin: 0 auto;
+    display: inline-block;
+  }
 }
