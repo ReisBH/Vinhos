@@ -131,6 +131,7 @@ main {
   border-radius: 10px;
   background-color:rgba(204, 204, 204, 0.5);
   padding: 2rem;
+  margin-left: 0.5rem;
 }
 
 .imgBx img {
