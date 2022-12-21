@@ -3,11 +3,14 @@
 body {
   margin: 0;
   padding: 0;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background: #000;
+  color: white;
+  background-color:#252839;
+  background-image: url(../imgLinks/background12.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 a,
@@ -15,219 +18,143 @@ a:hover {
   text-decoration: none;
 }
 
-.wrapper-header {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
+/* Configuração da barra de navegação*/
 
 .wrapper-header div {
-  max-width: 960px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .logo-container {
-  max-width: 960px;
+  max-width: 600px;
   margin: 0 auto;
-  height: 100px;
+  display: block;
+}
+
+.home {
+  padding: 4px 0 4px 0;
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.logo-container div h1 a {
-  text-decoration: none;
-  color: black;
+.home li {
+  position: relative;
+  list-style: none;
 }
 
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  background: #000;
+.home li a {
+  position: relative;
+  font-size: 2em;
+  line-height: 1em;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+.home li a::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 1;
+  color: var(--color);
+  overflow: hidden;
+  transition: 1s;
+  border-right: 4px solid var(--color);
+  -webkit-text-stroke: 1px var(--color);
+  filter: drop-shadow(0 0 25px var(--color));
 }
 
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  position: relative;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  height: 600px;
-  background: #fff;
-}
-
-.container .imgBx {
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width: 50%;
-  height: 100%;
-  background: #212121;
-  transition: 0.3s linear;
 }
 
-.container .imgBx img {
+.container ul {
   position: relative;
-  width: 700px;
-  left: -50px;
-}
-
-.container .details {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 40px 20px 40px 20px;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.container .details h2 {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0;
-  font-size: 2.4em;
-  line-height: 0.75em;
-  color: #444;
-  text-align: justify;
+.container ul li {
+  position: relative;
+  list-style: none;
 }
 
-.container .details h2 span {
-  font-size: 0.4em;
+.container ul li a {
+  position: relative;
+  font-size: 2em;
+  line-height: 1em;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #999;
-  text-align: justify;
-}
-
-.container .details p {
-  max-width: 85%;
-  margin-left: 5%;
-  color: #333;
-  font-size: 14px;
-  margin-bottom: 18px;
-  text-align: justify;
-}
-
-.container .details p span {
-  font-weight: bold;
-  text-align: justify;
-}
-
-.container .details h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 2.5em;
-  color: #a2a2a2;
-  float: left;
-  text-align: justify;
-}
-
-.product-colors span {
-  width: 26px;
-  height: 26px;
-  top: 7px;
-  margin-right: 12px;
-  left: 10px;
-  border-radius: 50%;
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-}
-
-.black {
-  background: #000;
-}
-
-/* responsive */
-@media (max-width: 1080px) {
-  .container {
-    max-width: 85vw;
-    margin: 0 auto;
-    height: auto;
-  }
-  .container .imgBx {
-    padding: 40px;
-    box-sizing: border-box;
-    width: 100% !important;
-    height: auto;
-    text-align: center;
-    overflow: hidden;
-  }
-  .container .imgBx img {
-    left: initial;
-    max-width: 540px;
-  }
-  .details {
-    width: 100% !important;
-    height: auto;
-    padding: 20px;
-  }
-  .container .details p {
-    margin-left: 0;
-    max-width: 100%;
-    text-align: justify;
-  }
-}
-
-/* responsive */
-@media (max-width: 600px) {
-  .container {
-    height: auto;
-  }
-  .container .imgBx {
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100% !important;
-    height: auto;
-    text-align: center;
-    overflow: hidden;
-  }
-  .container .imgBx img {
-    left: initial;
-    max-width: 480px;
-  }
-
-  .container .details h2 {
-    font-size: 2.4em;
-    line-height: 0.75em;
-    color: #444;
-    text-align: justify;
-  }
-  
-  .container .details h2 span {
-    letter-spacing: 0;
-    color: #999;
-    text-align: justify;
-  }
-  
-  .details {
-    width: 100% !important;
-    height: auto;
-    padding: 20px;
-  }
-  .container .details p {
-    margin-left: 0;
-    max-width: 100%;
-  }
-}
-
-footer {
-  position: fixed;
-  right: 16px;
-  bottom: 12px;
-}
-
-footer a {
-  color: #fff;
   text-decoration: none;
-  font-size: 12px;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+.container ul li a::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 0;
+  color: var(--color);
+  overflow: hidden;
+  transition: 1s;
+  border-right: 4px solid var(--color);
+  -webkit-text-stroke: 1px var(--color);
+}
+
+.container ul li a:hover::before {
+  width: 100%;
+  filter: drop-shadow(0 0 25px var(--color));
+}
+
+/*Configuração do conteúdo da página*/
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+}
+
+.imgBx {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color:rgba(204, 204, 204, 0.5);
+  padding: 2rem;
+}
+
+.imgBx img {
+  max-height: 25.5rem;
+}
+
+.details {
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color:rgba(204, 204, 204, 0.5);
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.details h2 {
+  font-size: 1.5em;
+}
+
+.details p {
+  font-size: 1em;
+  text-align: justify;
+}
+
+.details p span {
+  font-size: 1em;
+  font-weight: bold;
 }
